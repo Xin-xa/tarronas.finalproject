@@ -217,9 +217,81 @@ def codechallenges(user2):
             print(input("Press ENTER to return to menu..."))
         codechallenges(user2)
 
+    elif choice == "7":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Grocery")
+
+        name = input("Enter your name: ")
+        grocery_purchase = input("Did you purchase a grocery today : ")
+
+        if grocery_purchase == 'yes':
+            print(f"\nWelcome {name} to the Counter\n")
+
+            item_name = input("What item did you purchase: ")
+            item_price = float(input("Item price: "))
+            
+
+            age = input("Age: ")
+            if age.isnumeric():
+                print("Yes, this is a number")
+                new_age = int(age) + 10  
+                payment_amount = float(input("Payment amount: "))
+                tax = item_price * 0.123  
+                senior_discount = 0
+
+
+                if int(age) >= 60:
+                
+                    senior_discount = item_price * 0.052
+                total_price = item_price + tax - senior_discount
 
             
-    
+                change = payment_amount - total_price
+
+            
+                print("\nHere is your receipt:\n")
+                print(f"Item: {item_name}")
+                print(f"Item price: {item_price}")
+                print(f"Tax of 12.3% applied: {tax:.2f}")
+                print(f"Senior discount applied: {senior_discount:.2f}")
+                print(f"Total price after tax and discounts: {total_price:.2f}")
+                print(f"Thank you for your payment, your change is: {change:.2f}\n")
+
+            else:
+                print("Invalid input. Age must be a number.")
+        else:
+            print("No grocery purchase today. Have a nice day!")
+
+        print(f"Hello, {name} you have purchased a {item_name} and it cost {item_price} pesos, and by adding the tax which is {tax} pesos and the senior discount which is {senior_discount} pesos, the total is {total_price} pesos and you payed {payment_amount} pesos, so your change is {change} pesos ")
+        print(input("Press ENTER to return to menu"))
+        codechallenges(user2)
+
+    elif choice == "8":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            num = int(input("Enter a number: "))
+            if num < 0:
+                print("Factorial is not for negative numbers.")
+            else:
+                factorial = 1
+                for jhed in range(num, 0, -1):
+                    factorial *= jhed
+
+            print(f"The factorial of {num} is {factorial}.")
+            print(input("Press ENTER yo return to the menu"))
+            codechallenges(user2)
+
+
+
 
 #####################################################################
 def activities(user1):
@@ -238,7 +310,6 @@ def activities(user1):
         activities(user1)
     elif choice == "2":
         activities(user1)
-
 
 #####################################################################################################################################################
     elif choice == "3":
