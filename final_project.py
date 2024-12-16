@@ -278,17 +278,385 @@ def codechallenges(user2):
             print(input("Press the ENTER to return to the menu"))
             codechallenges(user2)
         elif choice.lower() == "yes":
-            num = int(input("Enter a number: "))
-            if num < 0:
-                print("Factorial is not for negative numbers.")
-            else:
-                factorial = 1
-                for jhed in range(num, 0, -1):
-                    factorial *= jhed
+            print("Please answer the following")
+        num = int(input("Enter a number: "))
+        if num < 0:
+            print("Factorial is not for negative numbers.")
+        else:
+            factorial = 1
+            for jhed in range(num, 0, -1):
+                factorial *= jhed
 
             print(f"The factorial of {num} is {factorial}.")
             print(input("Press ENTER yo return to the menu"))
             codechallenges(user2)
+
+    elif choice == "9":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        j = int(input("Give a number: "))
+        for x in range(j, 0,-1):
+            for y in range(j,x,-1):
+                print(" ", end=" ")
+            print("* " * x)
+            print(input("Press ENTER yo return to the menu"))
+            codechallenges(user2)
+
+
+    elif choice == "10":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        for x in range(6, 0, -1):
+            for y in range(1, x + 1):
+                print(" ", end=" ")
+            for z in range(6, x, -1):
+                print("*", end=" ")
+            for a in range(6, x, -1):
+                print("*", end=" ")
+            print()
+
+        for x in range(1, 5):
+            for y in range(1, x + 2):
+                print(" ", end=" ")
+            for z in range(5, x, -1):
+                print("*", end=" ")
+            for a in range(5, x, -1):
+                print("*", end=" ")
+            print( )
+        print(input("Press ENTER yo return to the menu"))
+        codechallenges(user2)
+
+    elif choice == "11":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        for x in range(5, 0, -1):
+            for y in range(1, x + 1):
+                print(" ", end=" ")
+            for z in range(5, x, -1):
+                print("*", end=" ")
+            for a in range(4, x, -1):
+                print("*", end=" ")
+            print()
+
+
+        for x in range(1, 5):
+            for y in range(1, x + 2):
+                print(" ", end=" ")
+            for z in range(4, x, -1):
+                print("*", end=" ")
+            for a in range(3, x, -1):
+                print("*", end=" ")
+            print()
+        print(input("Press ENTER yo return to the menu"))
+        codechallenges(user2)
+
+
+    elif choice == "12":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        for x in range(7, 0, -1):
+            for y in range(1, x + 1):
+                print(" ", end=" ")
+            for z in range(7, x, -1):
+                print("*", end=" ")
+            for a in range(6, x, -1):
+                print("*", end=" ")
+            print()
+        for x in range(0, 4):
+            for y in range(4, 0, -1):
+                print(" ", end= " ")
+            for z in range(3, 4):
+                print("*", end= " ")
+            for a in range(4, 0, -1):
+                print("*", end= " ")
+            print()
+        print(input("Press ENTER yo return to the menu"))
+        codechallenges(user2)
+
+
+    elif choice == "13":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        for x in range(1,7):
+            for y in range(6, x, -1):
+                print(" ", end= " ")
+            for z in range(x, 1, -1):
+                print(z, end= " ")
+            for a in range(1, x + 1):
+                print(a, end= " ")
+            print()
+        for x in range(5, 0, -1):
+            for y in range(5 - x + 1):
+                print(" ", end=" ")
+            for z in range(x, 0, -1):
+                print(z, end=" ")
+            for a in range(2, x + 1):
+                print(a, end=" ")     
+            print()  
+        print(input("Press ENTER yo return to the menu"))
+        codechallenges(user2)
+
+
+    elif choice == "14":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        go = True
+        no = 0
+        while go == True:
+            num = eval(input("Please Enter a number--->  "))
+            if num == 0:
+                print("Program Terminated")
+                print(f"The total of the number that you have given is {no}")
+                print(input("Press ENTER to return to the menu..."))
+                codechallenges(user2)
+
+            else:
+                no += num
+                continue
+
+
+    elif choice == "15":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        isGo = True
+        num = 0
+        while isGo == True:
+            question = input("Do you want to add more Triangles ----> ")
+
+            if question.lower() == "no":
+                os.system("cls")
+                print("Progress Terminated")
+                print(input("Press ENTER to reuturn  to menu....")) 
+                codechallenges(user2)
+                isGo = False
+
+            elif question.lower() == "yes":
+                os.system("cls")
+                num += 1
+                for x in range(1,6):
+                    for y in range(1,num + 1):
+                        for r in range(1, x + 1):
+                            print("^", end=" ")
+                        for z in range(5, x, - 1):
+                            print(" ", end=" ")
+                        print(" ", end=" ")
+                    print()
+                continue
+            else:
+                os.system("cls")
+                print("Please answer only with Yes or No") 
+
+
+    elif choice == "16":
+        ask = input("Do you want to check this code challenge (yes/no) : ")
+        if ask.lower() == "no":
+            print("Thankyou for checking")
+            print(input("Press the ENTER to return to the menu"))
+            codechallenges(user2)
+        elif choice.lower() == "yes":
+            print("Please answer the following")
+        print("WELCOME TO OUR BANK PROGRAM")
+
+        name = input("\nPlease Enter your Fullname: ")
+        print(f"\nHello Welcome to our bank {name}")
+
+        def ask_yes_no(question):
+            while True:
+                response = input(question).lower()
+                if response == "yes" or response == "no":
+                    return response
+                else:
+                    print("Just answer with yes or no.")
+
+        isapplying = ask_yes_no("\nDo you want to make a Bank Account? : ")
+
+        if isapplying == "no":
+            print("Thank you for your time.")
+            exit()  
+
+        if isapplying == "yes":
+            print("\nLet me help you create a bank account.")
+            isreq = ask_yes_no("\nAre you sure you want to create a Bank Account?: ")
+            if isreq == "no":
+                print("Thank you for your time.")
+                exit()  
+            elif isreq == "yes":
+                print("\nPlease fill in the information below.")
+        else:
+            print("Invalid response. Exiting the program.")
+            exit()
+
+        accounts = {}
+
+        def create_account():
+            username = input("Enter a username: ")
+            password = input("Enter your password: ")
+            if username in accounts:
+                print("Account already exists!")
+                if password in  accounts:
+                    print("this password have been used")
+                    
+            else:
+                accounts[username] = 0
+                print(f"Account created successfully for {username}.")
+                accounts[password] = 0
+                print(f"password have been created successfully {password}.")
+
+
+        def deposit():
+            username = input("Enter your username: ")
+            if username in accounts:
+                    password = input("Enter your password: ")
+            if password in accounts:
+                try:
+                    amount = int(input("Enter amount to deposit : "))
+                    if amount > 0:
+                        accounts[username] += amount
+                        print(f"Deposited {amount} successfully. New balance: {accounts[username]}")
+                        denomination(amount)
+                    else:
+                        print("Amount must be positive!")
+                except ValueError:
+                    print("Invalid input! Please enter a whole number.")
+            else:
+                print("Account not found!")
+
+
+        def withdrawal():
+            username = input("Enter your username: ")
+            if username in accounts:
+                password = input("Enter your password: ")
+            if password in accounts:
+                try:
+                    amount = int(input("Enter amount to withdraw (whole numbers only): "))
+                    if 0 < amount <= accounts[username]:
+                        accounts[username] -= amount
+                        print(f"Withdrawn {amount} successfully. Remaining balance: {accounts[username]}")
+                        denomination(amount)
+                    else:
+                        print("Insufficient funds or invalid amount!")
+                except ValueError:
+                    print("Invalid input! Please enter a whole number.")
+            else:
+                print("Account not found!")
+
+
+        def check_balance():
+            username = input("Enter your username: ")
+            if username in accounts:
+                print(f"Your balance: {accounts[username]}")
+            
+            else:
+                print("Account not found!")
+        def denomination(amount):
+            print("\nDenomination Breakdown:")
+            A = amount // 1000
+            AA = amount % 1000
+
+            B = AA // 500
+            BB = AA % 500
+
+            C = BB // 200
+            CC = BB % 200
+
+            D = CC // 100
+            DD = CC % 100
+
+            E = DD // 50
+            EE = DD % 50
+
+            F = EE // 20
+            FF = EE % 20
+
+            G = FF // 10
+            GG = FF % 10
+
+            H = GG // 5
+            HH = GG % 5
+
+            I = HH // 1
+
+            print("1000---", A)
+            print("500----", B)
+            print("200----", C)
+            print("100----", D)
+            print("50-----", E)
+            print("20-----", F)
+            print("10-----", G)
+            print("5------", H)
+            print("1------", I)
+
+
+
+
+        def options():
+            while True:
+                print("\nPlease follow this instructions.")
+                print("\nBanking System")
+                print("1. Create Account")
+                print("2. Deposit")
+                print("3. Withdraw")
+                print("4. Check Balance")
+                print("5. Exit")
+                choice = input("Choose an option (1-5): ")
+
+
+                if choice == '1':
+                    create_account()
+                elif choice == '2':
+                    deposit()
+                elif choice == '3':
+                    withdrawal()
+                elif choice == '4':
+                    check_balance()
+                elif choice == '5' or "Exit":
+                    print("Thank you for using the Banking System!")
+                    break
+                else:
+                    print("Invalid option. Please try again.")
+                    
+
+        options()
+
+                    
+
+
+
 
 
 
