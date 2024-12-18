@@ -13,7 +13,7 @@ def menu(user):
     print(f"Welcome to my final project, {user}!")
     print("1. Lessons\n\n2.Terminal\n\n3. Activities\n\n4. Code Challenges\n\n5. Exit")
     while loop:
-        choice = input("Please Enter the topic you want to explore (1/2/3/4): ")
+        choice = input("Please Enter the topic you want to explore (1/2/3/4/5): ")
 
         if choice.lower() == "1":
             lessons(user)
@@ -31,12 +31,13 @@ def menu(user):
         
 ##########################################################################################################################################################################
 def terminal(user):
+    os.system("cls")
     """First Menu Option [TERMINAL]."""
     print("\nTERMINAL MENU")
     print("1. Description\n\n2. Navigation\n\n3. Commands/Functions\n\n4. Back to Main Menu")
     while loop:
-        choice = input("Please Enter the number of the topic you want to explore: ")
-        if choice.lower() == "5":
+        choice = input("Please Enter the number of the topic you want to explore(1/2/3/4): ")
+        if choice.lower() == "4":
             os.system("cls")
             menu(user)
         elif choice.lower() == "1":
@@ -66,7 +67,6 @@ def terminal(user):
             terminal(user)
 #########################################################################################################################################################        
 def codechallenges(user2):
-    os.system("cls")
     import os
     """Code Challenges Placeholder"""
     print("This is the list of the code challenge")
@@ -1533,11 +1533,12 @@ def activities(user1):
                     print("Invalid choice! Please answer with 'yes' or 'no'.")
 #########################################################################################################################       
 def lessons(user3):
+    os.system("cls")
     """First Menu Option [LESSONS]."""
     print("\nLESSONS MENU")
     print("1. Printing\n\n2.Printing with Variables\n\n3. Printing Using f-Strings for Formatted Output\n\n4. Printing with Mathematical Operations\n\n5. Printing With loops\n\n6. While loops\n\n7. String Concatenation\n\n8. Denomination\n\n9. Function Definition (def) and Return\n\n10. Exit")
     while loop:
-        choice = input("Please Enter the number of the topic you want to explore: ")
+        choice = input("Please Enter the number of the topic you want to explore (1/2/3/4/5/6/7/8/9/10): ")
         if choice.lower() == "10":
             os.system("cls")
             menu(user3)
@@ -1765,7 +1766,7 @@ def lessons(user3):
             print(input("Press ENTER to return to menu"))
             lessons(user3)
         else:
-            print("Invalid input. Please enter 'yes' or 'no'.")  
+            print("Invalid input. Please enter a valid choice.")  
 # Main program loop
 while loop:
     start = input("\nWould you like to use the system? (yes / no): ")
