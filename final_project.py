@@ -1,8 +1,8 @@
 import os
 
-# print("My Final Project")
-# print("John Jhedrick M. Tarronas")
-# print("BSIT 1C")
+print("My Final Project")
+print("John Jhedrick M. Tarronas")
+print("BSIT 1C")
 
 loop = True
 ############################################################
@@ -11,17 +11,19 @@ def menu(user):
     """This is the Main Menu of the Program"""
     print("\nMAIN MENU")
     print(f"Welcome to my final project, {user}!")
-    print("1. Terminal\n2. Activities\n3. Code Challenges\n4. Exit")
+    print("1. Lessons\n\n2.Terminal\n\n3. Activities\n\n4. Code Challenges\n\n5. Exit")
     while loop:
-        choice = input("Please Enter the topic you want to explore (terminal/activities/code challenges/exit): ")
+        choice = input("Please Enter the topic you want to explore (1/2/3/4): ")
 
-        if choice.lower() == "terminal":
+        if choice.lower() == "1":
+            lessons(user)
+        elif choice.lower() == "2":
             terminal(user)
-        elif choice.lower() == "activities":
+        elif choice.lower() == "3":
             activities(user)
-        elif choice.lower() == "code challenges":
+        elif choice.lower() == "4":
             codechallenges(user)
-        elif choice.lower() == "exit":
+        elif choice.lower() == "5":
             print("Thank you for using the system!")
             exit()
         else:
@@ -31,22 +33,26 @@ def menu(user):
 def terminal(user):
     """First Menu Option [TERMINAL]."""
     print("\nTERMINAL MENU")
-    print("1. Description\n2. Navigation\n3. Commands/Functions\n4. Back to Main Menu")
+    print("1. Description\n\n2. Navigation\n\n3. Commands/Functions\n\n4. Back to Main Menu")
     while loop:
         choice = input("Please Enter the number of the topic you want to explore: ")
-        
-        if choice.lower() == "4":
+        if choice.lower() == "5":
+            os.system("cls")
             menu(user)
         elif choice.lower() == "1":
-            print("The Terminal is a modern interface for various shells like cmd, PowerShell, Linux, Python, etc.")
+            os.system("cls")
+            print("\nThe Terminal is a modern interface for various shells like cmd, PowerShell, Linux, Python, etc. \n")
+            print("A command line or terminal is a text-based interface used to interact with a computer. Unlike graphical user interfaces (GUIs) that rely on visual elements like icons and buttons, command lines allow users to type specific commands to perform tasks.")
             input("Press ENTER to continue...")
             terminal(user)
         elif choice.lower() == "2":
-            print("\nTo navigate through files using the terminal, use commands like \n 'md' (Make Directory)\n 'cd' (Change Directory)\n 'dir' (Show current location files).\n 'type nul > filename.ext' to create a new files.\n")
+            os.system("cls")
+            print("\n\nTo navigate through files using the terminal, use commands like \n\n 'md' (Make Directory) \n\n 'cd' (Change Directory) \n\n 'dir' (Show current location files). \n\n 'type nul > filename.ext' to create a new files. \n\n")
             input("Press ENTER to continue...")
             terminal(user)
 
         elif choice.lower() == "3":
+            os.system("cls")
             print("\nCommand Keywords:")
             print("- dir: Displays a list of files and directories.")
             print("- md: Creates a new directory.")
@@ -54,49 +60,56 @@ def terminal(user):
             print("- type nul > filename: Creates a new file.")
             input("Press ENTER to continue...")
             terminal(user)
-        else:
-            print("Please enter a valid choice.")
+        elif choice.lower() == "4":
+            print("Thankyou for Using my system")
+            print(input("Press ENTER to return to menu"))
             terminal(user)
 #########################################################################################################################################################        
 def codechallenges(user2):
+    os.system("cls")
+    import os
     """Code Challenges Placeholder"""
     print("This is the list of the code challenge")
-    print("1. code_challenge1 \n2. code_challenge2\n3. code_challenge3\n4. code_challenge4\n5. code_challenge5\n6. code_challenge6\n7. code_challenge7\n8. code_challenge8\n9. code_challenge9\n10. code_challenge10\n11. code_challenge11\n12. code_challenge12\n13. code_challenge13\n14. code_challenge14\n15. code_challenge15\n16. code_challenge16\n17. exit")
+    print("1. code_challenge1\t\t11. code_challenge11\n\n2. code_challenge2\t\t12. code_challenge12\n\n3. code_challenge3\t\t13. code_challenge13\n\n4. code_challenge4\t\t14. code_challenge14\n\n5. code_challenge5\t\t15. code_challenge15\n\n6. code_challenge6\t\t16. code_challenge16\n\n7. code_challenge7\t\t17. exit\n\n8. code_challenge8\n\n9. code_challenge9\n\n10. code_challenge10")
     while loop:
-        choice = input("Please select the Code challenge that you want to explore (enter the number 1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17): ")
+        choice = input("\nPlease select the Code challenge that you want to explore (enter the number 1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17): ")
         if choice == "17":
+            os.system("cls")
             print("Thankyou for checking the list of my code challenge")
             input("Press ENTER to return to the menu...")
             menu(user)
-    
+################################################################################################################################   
         elif choice == "1":
+            os.system("cls")
             while loop:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
-                if ask == "no":
+                if ask.lower() == "no":
                     print("Thankyou for checking")
                     codechallenges(user2)
-                elif ask == "yes":
+                elif ask.lower() == "yes":
                     print (" \t\t\t\t\t\t\t\t\t\t* \n\t\t\t\t\t\t\t\t\t\t\b*** \n\t\t\t\t\t\t\t\t\t\t\b\b***** \n\t\t\t\t\t\t\t\t\t\t\b\b\b******* \n\t\t\t\t\t\t\t\t\t\t\b\b***** \n\t\t\t\t\t\t\t\t\t\t\b*** \n\t\t\t\t\t\t\t\t\t\t* \n ") 
                     print(input("Press ENTER to return to the menu..."))
                     codechallenges(user2)
                 else:
                     print("Please enter a valid choice.")
-
+################################################################################################################################   
         elif choice == "2":
+            os.system("cls")
             while loop:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
-                if ask == "no":
+                if ask.lower() == "no":
                     print("Thankyou for checking")
                     codechallenges(user2)
-                elif ask == "yes":
+                elif ask.lower() == "yes":
                     name = input ("What is your name: ")
                     print(" \t\t\t\t\t\t\t\t\t\t   *\n\n\t\t\t\t\t\t\t\t\t\t\b\b  *  *  *  \n\n\t\t\t\t\t\t\t\t\t\t\b\b\b\b *  *  *  *  * \n\t\t\t\t\t\t\t\t\t\t\b\b\b-------------\n\t\t\t\t\t\t\t\t\t\t\b\b\b\b\b\b* |   Hi! "+name+"  | *\n\t\t\t\t\t\t\t\t\t\t\b\b\b------------- \n\t\t\t\t\t\t\t\t\t\t\b\b\b*  *  *  *  *  \n\n\t\t\t\t\t\t\t\t\t\t\b\b  *  *  *  \n\n\t\t\t\t\t\t\t\t\t\t\t\b\b\b\b\b*")
                     print(input("Press ENTER to return to the menu..."))
                     codechallenges(user2)
                 else:
                     print("Please enter a valid choice.")
-
+################################################################################################################################   
         elif choice == "3":
+            os.system("cls")
             while True:  
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -120,8 +133,9 @@ def codechallenges(user2):
                     codechallenges(user2)  
                 else:
                     print("Please Enter a valid choice")
-
+################################################################################################################################   
         elif choice == "4":
+            os.system("cls")
             while True:  
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -153,8 +167,9 @@ def codechallenges(user2):
                     codechallenges(user2) 
                 else:
                     print("Please enter a valid choice.")
-
+################################################################################################################################   
         elif choice == "5":
+            os.system("cls")
             while True:  
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -217,9 +232,9 @@ def codechallenges(user2):
                         print(f"Error: {e}. Please enter a valid amount.")
                 else:
                     print("Invalid input. Please enter 'yes' or 'no'.")
-
-
+################################################################################################################################   
         elif choice == "6":
+            os.system("cls")
             while True: 
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -269,8 +284,9 @@ def codechallenges(user2):
                     codechallenges(user2)
                 else:
                     print("Invalid input. Please enter 'yes' or 'no'.")
-
+################################################################################################################################   
         elif choice == "7":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -330,9 +346,9 @@ def codechallenges(user2):
                     break
                 else:
                     print("Invalid choice. Please answer 'yes' or 'no'.")
-
-
+################################################################################################################################   
         elif choice == "8":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -361,9 +377,9 @@ def codechallenges(user2):
                     break 
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
-
+################################################################################################################################   
         elif choice == "9":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -388,10 +404,9 @@ def codechallenges(user2):
                     break  
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
-
-
+################################################################################################################################   
         elif choice == "10":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -427,9 +442,9 @@ def codechallenges(user2):
                     break 
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
-
+################################################################################################################################   
         elif choice == "11":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -465,10 +480,9 @@ def codechallenges(user2):
                     break  
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
-
-
+################################################################################################################################   
         elif choice == "12":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -503,9 +517,9 @@ def codechallenges(user2):
                     break 
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
-
+################################################################################################################################   
         elif choice == "13":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -525,7 +539,7 @@ def codechallenges(user2):
                             print(a, end=" ")
                         print()  
 
-                   
+        
                     for x in range(5, 0, -1):
                         for y in range(5 - x + 1):  
                             print(" ", end=" ")
@@ -540,8 +554,9 @@ def codechallenges(user2):
                     break 
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
+################################################################################################################################   
         elif choice == "14":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -570,8 +585,9 @@ def codechallenges(user2):
 
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
+################################################################################################################################   
         elif choice == "15":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no) : ")
                 if ask.lower() == "no":
@@ -610,9 +626,9 @@ def codechallenges(user2):
                             print("Please answer only with 'Yes' or 'No'")  # Handle invalid input
                 else:
                     print("INVALID CHOICE. Please enter 'yes' or 'no'.")
-
-
+################################################################################################################################   
         elif choice == "16":
+            os.system("cls")
             import os
             def ask_yes_no(question):
                 while True:
@@ -779,17 +795,20 @@ def codechallenges(user2):
             bank_program()
 #####################################################################
 def activities(user1):
+    os.system("cls")
     """Activities Placeholder"""
     print("\nSecond MAIN MENU Option")
     print("LIST OF ACTIVITIES")
-    print("1. Act1\n2. Act2\n3. Act\n4. Act4\n5. Act5\n6. Act6\n 7.Act7\n8. Act8\n9. Act9\n10. Act10\n11. Act11\n12. Exit")
+    print("1. Activity1\t\t11. Activity11\t\t21. Activity21\n\n2. Activity2\t\t12. Activity12\t\t22. Activity22\n\n3. Activity3\t\t13. Activity13\t\t23. Activity23\n\n4. Activity4\t\t14. Activity14\t\t24. Activity24\n\n5. Activity5\t\t15. Activity15\t\t25. Activity25\n\n6. Activity6\t\t16. Activity16\t\t26. Activity26\n\n7. Activity7\t\t17. Activity17\n\n8. Activity8\t\t18. Activity18\n\n9. Activity9\t\t19. Activity19\n\n10. Activity10\t\t20. Activity20\n")                
     while True:
         choice = input("Please Enter the number of the activities that you want to explore: ")
-        if choice == "12":
+        if choice == "26":
+            os.system("cls")
             print(f"Thankyou for checking this activity {user}")
             input("Press ENTER to return to the menu....")
             menu(user)
         elif choice == "1":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -808,6 +827,7 @@ def activities(user1):
                     print("Invalid input. Please answer with 'yes' or 'no'.")
 ####################################################################################################################
         elif choice == "2":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -826,6 +846,7 @@ def activities(user1):
                     print("Invalid input. Please answer with 'yes' or 'no'.")
     #####################################################################################################################################################
         elif choice == "3":
+            os.system("cls")
             while True:
                 background = input("Are you sure you want to answer the survey (yes / no): ")
                 if background.lower() == "no":  
@@ -868,10 +889,11 @@ def activities(user1):
                     print("Invalid input. Please answer with 'yes' or 'no'.\n")
     ######################################################################################################################################################  
         elif choice == "4":
+            os.system("cls")
             while True:
-                background2 = input("Do you want to run this Activity (yes/no): ").lower()
+                background2 = input("Do you want to run this Activity (yes/no): ")
                 
-                if background2 == "yes":
+                if background2.lower() == "yes":
                     print("\nPlease fill in the following:")
                     try:
                         number1 = int(input("Enter a number: "))
@@ -902,7 +924,7 @@ def activities(user1):
                     activities(user1)
                     break
 
-                elif background2 == "no":
+                elif background2.lower() == "no":
                     print("Thank you for checking this activity!!")
                     activities(user1)
                     break
@@ -911,15 +933,16 @@ def activities(user1):
                 print("INVALID CHOICE! Please answer with 'yes' or 'no'.")
 ####################################################################################################################
         elif choice == "5":
+            os.system("cls")
             while True:
                 background = input("Are you sure you want to answer the survey (yes / no): ").lower()
                 
-                if background == "no":  
+                if background.lower() == "no":  
                     print("Thank you for checking this activity.")
                     activities(user1)
                     break  
 
-                elif background == "yes":  
+                elif background.lower() == "yes":  
                     print("\nFAHRENHEIT to CELSIUS CONVERTER")
                     try:
                         temp = float(input("Enter temperature in Fahrenheit: "))
@@ -935,16 +958,17 @@ def activities(user1):
                     print("INVALID CHOICE! Please answer with 'yes' or 'no'.")
 ##################################################################################################################################
         elif choice == "6":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no): ").lower()
                 
-                if ask == "no":
+                if ask.lower() == "no":
                     print("Thank you for checking!")
                     input("Press ENTER to return to the menu....")
                     activities(user1)
                     break
                 
-                elif ask == "yes":
+                elif ask.lower() == "yes":
                     print("\nArithmetic Operations Example:\n")
                     
                     x = 10
@@ -988,6 +1012,7 @@ def activities(user1):
                     print("Invalid Choice! Please answer with 'yes' or 'no'.")
 ########################################################################################################################
         elif choice == "7":
+            os.system("cls")
             while True:
                 gold = 0  # Initial gold count
                 miner = input("Hi, please enter your name: ")
@@ -1005,6 +1030,7 @@ def activities(user1):
                         print("Invalid input. Please answer with 'yes' or 'no'.")
 ##########################################################################################################################################
         elif choice == "8":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -1028,6 +1054,7 @@ def activities(user1):
                     print("INVALID CHOICE! Please answer with 'yes' or 'no'.")
 ############################################################################################################################
         elif choice == "9":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -1060,6 +1087,7 @@ def activities(user1):
                     print("Please answer with 'yes' or 'no'.")
 ###########################################################################################################################################
         elif choice == "10":
+            os.system("cls")
             while True:
                 ask = input("Do you want to check this code challenge (yes/no): ")
                 if ask.lower() == "no":
@@ -1118,19 +1146,634 @@ def activities(user1):
                     break 
                 else:
                     print("Invalid input! Please answer with 'yes' or 'no'.")
+#####################################################################################################################################################
+        elif choice == "11":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    for x in range(1, 11):
+                        print(x, "Hello World")
+                        print("Happy Foundation Day")
+                        name = input("Hi, what is your name: ")
+                        print(f"Hi {name}!")
+                        continue_prompt = input("Do you want to continue? (yes/no): ")
+                        if continue_prompt.lower() == "no":
+                            print("Thank you for participating!")
+                            input("Press ENTER to return to the menu....")
+                            activities(user1)  
+                            break
+                    break  
+                else:
+                    print("Invalid input. Please answer with 'yes' or 'no'.")
+#################################################################################################################################################
+        elif choice == "12":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ").lower()
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1) 
+                    break
+                elif ask.lower() == "yes":
+                    print("Starting the countdown from 10 to 2:")
+                    for x in range(10, 1, -1):
+                        print(f"\t\t\t\t\t{x}")
+                    print("\nCountdown complete!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+################################################################################################################################
+        elif choice == "13":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1) 
+                    break
+                elif ask.lower() == "yes":
+                    try:
+                        num1 = int(input("Enter any non-negative integer: "))
+                        if num1 < 0:
+                            print("Factorial is not defined for negative numbers. Please try again.")
+                            continue 
+                        factorial = 1
+                        for i in range(num1, 0, -1):
+                            factorial *= i
+                        print(f"The factorial of {num1} is {factorial}")
+                        input("Press ENTER to return to the menu....")
+                        activities(user1)
+                        break
+                    except ValueError:
+                        print("Invalid input! Please enter a valid integer.")
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+############################################################################################################################
+        elif choice == "14":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ").lower()
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1) 
+                    break
+                elif ask.lower() == "yes":
+                    print("Welcome to the Code Challenge for Choice 14!")
+                    try:
+                        num = int(input("Enter a positive integer: "))
+                        if num < 2:
+                            print(f"{num} is not a prime number.")
+                        else:
+                            is_prime = True
+                            for i in range(2, int(num ** 0.5) + 1):
+                                if num % i == 0:
+                                    is_prime = False
+                                    break
+                            if is_prime:
+                                print(f"{num} is a prime number.")
+                            else:
+                                print(f"{num} is not a prime number.")
+                    except ValueError:
+                        print("Invalid input! Please enter a valid positive integer.")
+                    
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+##################################################################################################################################################
+        elif choice == "15":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    print("Generated Pattern:")
+                    for x in range(0, 21):  
+                        print(x, end=" ") 
+                        for y in range(0, x):  
+                            print("*", end=" ")  
+                        print()  
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
 
-#########################################################################################################################         
+########################################################################################################################################################
+        elif choice == "16":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    for a in range(1, 6):  
+                        for b in range(6, a, -1): 
+                            print(" ", end=" ")
+                        for c in range(1, a * 2): 
+                            print("*", end=" ")
+                        print()  
+                    print("Invalid input! Please answer with 'yes' or 'no'.")  
+################################################################################################################################
+        elif choice == "17":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    try:
+                        col = int(input("Enter number of columns: "))
+                        if col <= 0:
+                            print("Please enter a positive number for columns.")
+                            continue
+                        for x in range(1, 11):
+                            for y in range(1, col + 1):
+                                print(f"{x} x {y} = {x * y}", end="\t")
+                            print()  
+                    except ValueError:
+                        print("Invalid input. Please enter a valid number.")
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")  
+######################################################################################################################
+        elif choice == "18":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    try:
+                        no = int(input("Enter number of Triangle rows: ")) 
+                        for x in range(1, no + 1): 
+                            for y in range(no - x):
+                                print(" ", end=" ")
+                            for z in range(1, 2 * x):  
+                                print("*", end=" ")
+                            print() 
+                    except ValueError:
+                        print("Please enter a valid number for the rows.")
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+####################################################################################################################################
+        elif choice == "19":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    while True:
+                        name = input('Please enter a name: ')
+                        if name.lower() == "stop":
+                            print("Program Terminated")
+                            print(input("Press ENTER to return to menu"))
+                            activities(user1)
+                            break 
+                        else:
+                            print(f"Hello, {name}!")  
+                            continue
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+##########################################################################################################################################
+        elif choice == "20":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)  
+                    break
+                elif ask.lower() == "yes":
+                    isContinue = True
+                    no = 0
+                    while isContinue:  
+                        ask = input("Would you like to add another Triangle (Yes/No): ")
+
+                        if ask.lower() == "no":
+                            print('PROGRAM TERMINATED')
+                            print(input("Press ENTER to return to menu"))
+                            activities(user1)
+                            break  
+                        os.system('cls')
+                        no += 1 
+                        for x in range(1, 5):  
+                            for r in range(1, no + 1):  
+                                for y in range(1, x + 1):  
+                                    print("*", end=" ")
+
+                                for z in range(5, x, -1): 
+                                    print(" ", end=" ")
+                            print() 
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+#####################################################################################################################################
+        elif choice == "21":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1) 
+                    break
+                elif ask.lower() == "yes":
+                    nameno = 0  
+                    while True:
+                        name = input("Enter a name: ")
+
+                        if name.lower() == "stop":
+                            print("Okay tama na")
+                            print(f"You have entered a total of {nameno} names!")
+                            break 
+
+                        else:
+                            print("type 'stop' if you want to terminate the program")
+                            nameno += 1 
+
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+##################################################################################################################################        
+        elif choice == "22":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    loop = True
+                    names = []
+                    while loop:
+                        askname = input("What name would you like to add (or type 'stop' to finish): ")
+                        if askname.lower() == "stop":
+                            print("\nNames entered:", names)
+                            print(f"You have entered {len(names)} names!")
+                            break
+                        else:
+                            names.append(askname)
+                else:
+                    print("Invalid input! Please answer with 'yes' or 'no'.")
+###################################################################################################################################################
+        elif choice == "23":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)
+                    break
+                elif ask.lower() == "yes":
+                    def factorial (number):
+                        """ This function's purpose is to compute/calculate the factorial of any number given """
+                        fact = 1
+                        for x in range(number, 0, -1):
+                            fact *= x
+
+                        return fact
+
+                    print(f"THe factorial of 13 is {factorial(13)}")
+#############################################################################################################################################                    
+        elif choice == "24":
+            os.system("cls")
+            while True:
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1)  
+                    break
+                elif ask.lower() == "yes":
+                    def factorial(number):
+                        """ This function's purpose is to compute/calculate the factorial of any number given """
+                        fact = 1
+                        def factorial(number):
+                            """ This function's purpose is to compute/calculate the factorial of any number given """
+                            fact = 1
+                            from activity23_test import factorial
+
+                    print(f"the factorial of 7 is {factorial(7)} ")
+                else:
+                    print("Invalid choice. Please type 'yes' or 'no'.")
+######################################################################################################################################
+        elif choice == "25":
+            while True:
+                os.system("cls")
+                ask = input("Do you want to check this code challenge (yes/no): ")
+                if ask.lower() == "no":
+                    print("Thank you for checking!")
+                    input("Press ENTER to return to the menu....")
+                    activities(user1) 
+                    break
+                elif ask.lower() == "yes":
+                    fruits = ["apples", "banana", "orange", "star apple", "guyabano"]
+
+                    print(f"Initial fruit list: {fruits}")
+
+                    # INDEXING / INDEX - Address / Location of an item inside a list
+                    #            0          1        2          3           4
+                    # fruits = ["apples", "banana", "orange", "star apple", "guyabano"]
+
+                    print(f"My favorite childhood fruit is {fruits[3]}")
+                    print(f"The last item on the list is {fruits[-1]}")
+
+                    fruits.append("longgan")
+                    print(f"After appending 'longgan': {fruits}")
+                    fruits.append("chico")
+                    print(f"After appending 'chico': {fruits}")
+
+                    fruits.insert(3, "papaya")
+                    print(f"After inserting 'papaya' at index 3: {fruits}")
+
+                    fruits.remove("longgan")
+                    print(f"After removing 'longgan': {fruits}")
+
+                    while True:
+                        fruit = input("Do you wish to add more fruits (Yes/No): ")
+                        if fruit.lower() == "no":
+                            print(f"Final fruit list: {fruits}")
+                            break
+                        elif fruit.lower() == "yes":
+                            new_fruit = input("Enter the name of the fruit to add: ")
+                            fruits.append(new_fruit)
+                            print(f"{new_fruit} added to the list!")
+                        else:
+                            print("Invalid input! Please answer with 'Yes' or 'No'.")
+                            continue
+                else:
+                    print("Invalid choice! Please answer with 'yes' or 'no'.")
+#########################################################################################################################       
+def lessons(user3):
+    """First Menu Option [LESSONS]."""
+    print("\nLESSONS MENU")
+    print("1. Printing\n\n2.Printing with Variables\n\n3. Printing Using f-Strings for Formatted Output\n\n4. Printing with Mathematical Operations\n\n5. Printing With loops\n\n6. While loops\n\n7. String Concatenation\n\n8. Denomination\n\n9. Function Definition (def) and Return\n\n10. Exit")
+    while loop:
+        choice = input("Please Enter the number of the topic you want to explore: ")
+        if choice.lower() == "10":
+            os.system("cls")
+            menu(user3)
+        elif choice.lower() == "1":
+            os.system("cls")
+            print("Example 1: Simple Text Output")
+            print("Input:")
+            print("""
+            # Simple printing
+            print("Hello, world!")
+            print("Welcome to Python coding.")
+            """)
+            print("Output:")
+            print("Hello, world!")
+            print("Welcome to Python coding.")
+            print("\n")
+            input("Press ENTER to continue...")
+            lessons(user3)
+#################################################################################################################################
+        elif choice.lower() == "2":
+            os.system("cls")
+            print("Example 2: Printing Variables")
+            print("Input:")
+            print("""
+            # Variables
+            name = "Alice"
+            age = 25
+
+            # Printing variables
+            print("Name:", name)
+            print("Age:", age)
+            """)
+            print("Output:")
+            name = "Alice"
+            age = 25
+            print("Name:", name)
+            print("Age:", age)
+            print("\n")
+            input("Press ENTER to continue...")
+            lessons(user3)
+###########################################################################################################################################
+        elif choice.lower() == "3":
+            os.system("cls")
+            print("Example 3: Using f-Strings for Formatted Output")
+            print("Input:")
+            print("""
+            # Variables
+            name = "Bob"
+            hobby = "cycling"
+
+            # Using f-strings
+            print(f"{name} enjoys {hobby}.")
+            """)
+            print("Output:")
+            name = "Bob"
+            hobby = "cycling"
+            print(f"{name} enjoys {hobby}.")
+            print("\n")
+            input("Press ENTER to continue...")
+            lessons(user3)
+############################################################################################################            
+        elif choice.lower() == "4":
+            os.system("cls")
+            print("Example 4: Printing with Mathematical Operations")
+            print("Input:")
+            print("""
+            # Simple math
+            x = 10
+            y = 5
+
+            print("Addition:", x + y)
+            print("Multiplication:", x * y)
+            print(f"The result of {x} divided by {y} is {x / y}.")
+            """)
+            print("Output:")
+            x = 10
+            y = 5
+            print("Addition:", x + y)
+            print("Multiplication:", x * y)
+            print(f"The result of {x} divided by {y} is {x / y}.")
+            print("\n")
+            input("Press ENTER to continue...")
+            lessons(user3)
+#############################################################################################################################
+        elif choice.lower() == "5":
+            os.system("cls")
+            print("Printing with Loops")
+            print("Input:")
+            print("""
+            # Looping through a range
+            for i in range(5):
+                print(f"Number: {i}")
+            """)
+            print("Output:")
+            for i in range(5):
+                print(f"Number: {i}")
+            print("\n")
+            print(input("Press ENTER to return to menu"))
+            lessons(user3)
+##############################################################################################################################
+        elif choice.lower() == "6":
+            os.system("cls")
+            print("While Loop")
+            print("Input:")
+            print("""
+            # While loop example
+            count = 1
+            while count <= 3:
+                print(f"Count is: {count}")
+                count += 1
+            """)
+            print("Output:")
+            count = 1
+            while count <= 3:
+                print(f"Count is: {count}")
+                count += 1
+            print("\n\n\n")
+
+            print("Infinite While Loop (Continuous Printing)")
+            print("Input:")
+            print("""
+            # Infinite while loop to print continuously
+            count = 1
+            while True:
+                print(f"Count: {count}")
+                count += 1
+            """)
+            print("Output:")
+            count = 1
+            while True:
+                print(f"Count: {count}")
+                count += 1
+
+                print(input("Press ENTER to return to menu"))
+                lessons(user3)
+##################################################################################################################################################
+        elif choice.lower() == "7":
+            os.system("cls")
+            print("String Concatenation")
+            print("Input:")
+            print("""
+            # Concatenating strings
+            first_name = "James"
+            last_name = "Bond"
+            full_name = first_name + " " + last_name
+            print("Full Name:", full_name)
+            """)
+            print("Output:")
+            first_name = "James"
+            last_name = "Bond"
+            full_name = first_name + " " + last_name
+            print("Full Name:", full_name)
+            print("\n")
+            print(input("Press ENTER to return to menu"))
+            lessons(user3)
+##############################################################################################################################################
+        elif choice.lower() == "8":
+            os.system("cls")
+            print("Denomination (Division and Modulo)")
+            print("Input:")
+            print("""
+            # Division and modulo
+            amount = 160
+            denomination = 25
+            result = amount // denomination  # Whole number division (integer division)
+            remainder = amount % denomination  # Remainder of division (modulo)
+            print(f"{amount} divided by {denomination} gives {result} with a remainder of {remainder}.")
+            """)
+            print("Output:")
+            amount = 160
+            denomination = 25
+            result = amount // denomination
+            remainder = amount % denomination
+            print(f"{amount} divided by {denomination} gives {result} with a remainder of {remainder}.")
+            print(input("Press ENTER to return to menu"))
+            lessons(user3)
+##############################################################################################################################
+        elif choice.lower() == "9":
+            print("Function Definition (def) and Return")
+            print("Input:")
+            print("""
+            # Defining a function with def and return
+            def greet(name):
+                return f"Hello, {name}!"
+
+            # Calling the function
+            greeting_message = greet('Alice')
+            """)
+            print("Output:")
+            def greet(name):
+                return f"Hello, {name}!"
+
+            greeting_message = greet('Alice')
+            print(greeting_message)  # Output: Hello, Alice!
+            print("\n")
+
+            # Function with While Loop and Return
+            print("Example 15: Function with While Loop and Return")
+            print("Input:")
+            print("""
+            # Defining a function with a while loop that uses return
+            def ask_for_input():
+                while True:
+                    answer = input("What is the capital of France? ")
+                    if answer.lower() == "paris":
+                        return "Correct!"
+                    else:
+                        print("Incorrect, try again.")
+            """)
+            print("Output:")
+            def ask_for_input():
+                while True:
+                    answer = input("What is the capital of France? ")
+                    if answer.lower() == "paris":
+                        return "Correct!"
+                    else:
+                        print("Incorrect, try again.")
+
+            # You would interactively enter an answer when prompted, and if correct, the function will return "Correct!"
+            input("Press ENTER to return to menu")  # Wait for user to press ENTER before going back to menu
+            lessons(user3)  # Assuming lessons is a function defined elsewhere to go back to the main menu
+################################################################################################################################
+        elif choice.lower() == "10":
+            print("Thankyou for Using my system")
+            print(input("Press ENTER to return to menu"))
+            lessons(user3)
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")  
 # Main program loop
 while loop:
     start = input("\nWould you like to use the system? (yes / no): ")
     if start.lower() == "yes":
         user = input("What's your name: ")
         menu(user)
-    elif start == "no":
+    elif start.lower() == "no":
         print("Thank you for using the system!")
         break
     else:
         print("Please enter a valid choice.")
-
-
-        
